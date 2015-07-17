@@ -19,6 +19,9 @@ class Subject {
         $this->observers->append($observer);
     }
 
+    /**
+     * @param Observer $observer
+     */
     public function unregisterObserver(Observer $observer){
         $key = array_search($observer,$this->observers->getArrayCopy(), true);
         if($key) {
